@@ -66,8 +66,10 @@ pnpm test
 - The Koa library is used for the REST API due to its simplicity and lightweight nature.
 - The Axios library is used for making HTTP requests to the public blocklist API.
 - The Winston library is used for logging.
+- The blocklist data is polled from the public blocklist API at a configurable interval of time.
 - The blocklist data is persisted in a local file to minimize downtime during restarts.
-- If no local data is available on start or if those are not fresh enough, the server will perform a "cold start". 
+- If no local data is available on start or if those are not fresh enough, the server will perform a "cold start" which can take longer.
+- All blacklisted ips are stored in memory inside a map, allowing fast and constant time retrieval for any record.
 
 ## Trade-offs
 Due to time constraints, the following trade-offs were made:
