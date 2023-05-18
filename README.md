@@ -77,3 +77,5 @@ Due to time constraints, the following trade-offs were made:
 - Unit tests cover critical functionality but may not provide complete coverage.
 - Error handling and validation may be simplified for brevity.
 - Some optimizations, such as caching, were not implemented.
+- A simple JSON file as used to persist blacklist data. A database should probably be used for scaling reasons.
+- To handle more clients, the service can implement an auto scaling capable architecture.
