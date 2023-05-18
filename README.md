@@ -47,7 +47,12 @@ BLACKLIST_FILE_PATH="./ipv4Blacklist.json"
 pnpm start
 ```
 
-2. The service will be accessible at http://localhost:<PORT>/ips/:ip where :ip is the ipv4 encoded IP address to check against the blacklist.
+or for development
+```bash
+pnpm start:dev
+```
+
+2. The service will be accessible at http://<IP>:<PORT>/ips/:ipv4 where :ipv4 is the ipv4 encoded IP address to check against the blacklist.
 
 ## Testing
 To run the tests, use the following command:
